@@ -205,3 +205,106 @@
         }
     }
 }
+
+#food_previews {
+    background: #f4f8fb;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .button_rounded {
+        background: rgba(237,75,82,1);
+        color: white;
+        display: inline-block;
+        padding: 15px 20px 15px 20px;
+        border-radius: 30px;
+        margin: 0.5rem auto 8rem auto;
+    }
+
+    .food_slider {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        column-gap: 2%;
+
+
+        .slide {
+            width: 20%;
+            position: relative;
+            height: 450px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            &:hover {
+                .background {
+                    background: #ed4852;
+                    transform: translate3d(0, -100px, 0);
+                }
+
+                .content {
+                    .food_title {
+                        color: white;
+                    }
+
+                    .food_description {
+                        color: white;
+                    }
+                }
+
+            }
+
+            .background {
+                background: white;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 1;
+                position: absolute;
+                transition: transform .3s ease-in-out;
+            }
+
+            .content {
+                z-index: 2;
+                position: absolute;
+                padding:20px;
+                height: 100%;
+                width: 100%;
+
+                .food_title {
+                    font-size: 2rem;
+                    font-weight: 900;
+                    margin-bottom: 2.5rem;
+                    color: rgba(237,75,82,1);
+                }
+
+                .food_description {
+                    font-size: 0.9rem;
+                    color: #7a8d99;
+                    line-height: 1.5;
+                    font-weight: 500;
+                    margin-bottom: 15%;
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
