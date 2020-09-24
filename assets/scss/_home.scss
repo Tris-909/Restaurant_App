@@ -93,6 +93,43 @@
     }
 
     .welcome_jumbo {
-        background: red;
+        max-width: 100%;
+        background: rgb(62,160,247);
+        background: radial-gradient(circle, rgba(62,160,247,1) 0%, rgba(9,113,206,1) 100%);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 100px;
+
+
+        .jumbo_title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .burger_fries {
+            position: absolute;
+            width: 70%;
+            height: 70%;
+
+            left: 30%;
+            top: 20%;
+        }
+
+        .status {
+            display: block;
+            padding : 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            background: black;
+            border-radius: 5px;
+            align-self: flex-start;
+            margin-bottom: 20px;    
+        }
     }
 }
